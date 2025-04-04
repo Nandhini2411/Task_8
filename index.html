@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard | Buyers, Products & Transactions</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css"/>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🧾 Business Dashboard</h1>
+      <button id="toggleTheme">🌓 Toggle Theme</button>
+    </header>
+
+    <section>
+      <h2>👤 Buyers</h2>
+      <input type="text" id="searchBuyer" placeholder="Search buyers..." />
+      <table id="buyersTable" class="display">
+        <thead>
+          <tr>
+            <th>Name</th><th>Email</th><th>Phone</th><th>Address</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Ravi Kumar</td><td>ravi@example.com</td><td>9876543210</td><td>Delhi</td></tr>
+          <tr><td>Priya Sharma</td><td>priya@example.com</td><td>9123456789</td><td>Mumbai</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>📦 Products</h2>
+      <input type="text" id="searchProduct" placeholder="Search products..." />
+      <table id="productsTable" class="display">
+        <thead>
+          <tr>
+            <th>Name</th><th>Category</th><th>Price (₹)</th><th>Stock</th><th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="stock-high"><td>Mobile</td><td>Electronics</td><td>15,000</td><td>25</td><td>Smartphone with 6GB RAM</td></tr>
+          <tr class="stock-low"><td>Notebook</td><td>Stationery</td><td>50</td><td>3</td><td>200-page ruled</td></tr>
+          <tr class="stock-out"><td>Laptop</td><td>Electronics</td><td>55,000</td><td>0</td><td>15-inch, Intel i5</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>💳 Transactions</h2>
+      <input type="text" id="searchTransaction" placeholder="Search transactions..." />
+      <table id="transactionsTable" class="display">
+        <thead>
+          <tr>
+            <th>ID</th><th>Buyer</th><th>Product</th><th>Date</th><th>Qty</th><th>Total (₹)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>TXN001</td><td>Ravi Kumar</td><td>Mobile</td><td>2025-04-01</td><td>1</td><td>15,000</td></tr>
+          <tr><td>TXN002</td><td>Priya Sharma</td><td>Notebook</td><td>2025-04-02</td><td>5</td><td>250</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
